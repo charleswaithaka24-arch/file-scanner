@@ -1,0 +1,9 @@
+value = input("write your operation:")
+try :
+  calc = eval(value)
+except ZeroDivisionError :
+  print('Undefined')
+except (ValueError,TypeError,NameError) :
+  print('incorrect input')
+except OverflowError:
+  print('Your value is too large')
