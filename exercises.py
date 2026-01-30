@@ -28,12 +28,16 @@ total=sum(1 for folder in direction.iterdir() )
 for file in direction.iterdir():
  if file.is_file():
    stats=file.stat()
-   file_size=(f"{stats.st_size} bytes")
+   size=stats.st_size
+   file_size=(f"{size} bytes")
    ext = file.suffix
-   contain[ext].append({f"{file.name}:{file_size}"})
+   contain[ext].append((file.name,size))
 for e, n in contain.items():
   print(e)
   print(" ",n)
+for y,x in contain.items():
+ y=sorted(x, key=lambda g:g[1], reverse=True)
+ print(y)
 sTats=direction.stat()
 size=sTats.st_size
 print(f"{direction.name} has these number of files and directories:",total)

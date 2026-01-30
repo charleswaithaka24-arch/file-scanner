@@ -1,6 +1,7 @@
 value = input("write your operation:")
 try :
   calc = eval(value)
+  print(calc)
 except ZeroDivisionError :
   print('Undefined')
 except (ValueError,TypeError,NameError) :
