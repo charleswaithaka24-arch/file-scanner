@@ -35,7 +35,7 @@ for file in direction.iterdir():
 for e, n in contain.items():
   print(e)
   print(" ",n)
-for y,x in contain.items():
+for h,x in contain.items():
  y=sorted(x, key=lambda g:g[1], reverse=True)
  print(y)
 sTats=direction.stat()

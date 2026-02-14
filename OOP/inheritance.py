@@ -1,43 +1,45 @@
-# class Animal:
-#   def __init__(self,name,is_alive):
-#     self.name=name
-#     self.is_alive=is_alive
+# I included super() although it was not part of the objective
 
-#   def sleep(self):
-#     print("This animal is asleep")
+class Animal:
+  def __init__(self,name,is_alive):
+    self.name=name
+    self.is_alive=is_alive
 
-#   def eat(self):
-#     print("This animal is asleep")
+  def sleep(self):
+    print("This animal is asleep")
+
+  def eat(self):
+    print("This animal is asleep")
   
-# class Dog(Animal):
-#   # def __init__(self,name,is_alive,colour):
-#   #   super().__init__(self,name,is_alive)
-#   #   self.colour=colour
+class Dog(Animal):
+  def __init__(self,name,is_alive,colour):
+    super().__init__(name,is_alive)
+    self.colour=colour
 
-#   def Talk(self):
-#     print(f"{self.name} is Barking.")
+  def Talk(self):
+    print(f"{self.name} is Barking.")
   
-# class Cat(Animal):
-#   # def __init__(self,name,is_alive,colour):
-#   #   super().__init__(self,name,is_alive)
-#   #   self.colour=colour
+class Cat(Animal):
+  def __init__(self,name,is_alive,colour):
+    super().__init__(name,is_alive)
+    self.colour=colour
 
-#   def Talk(self):
-#     print(f"{self.name} is purring.")
+  def Talk(self):
+    print(f"{self.name} is purring.")
   
-# class Mouse(Animal):
-#   # def __init__(self,name,is_alive,colour):
-#   #   super().__init__(self,name,is_alive)
-#   #   self.colour=colour
+class Mouse(Animal):
+  def __init__(self,name,is_alive,colour):
+    super().__init__(name,is_alive)
+    self.colour=colour
 
-#   def Talk(self):
-#     print(f"{self.name} is squeeking.")
+  def Talk(self):
+    print(f"{self.name} is squeeking.")
 
-# mouse=Mouse("Mickey",True)
-# dog=Dog("Max",True)
-# cat=Cat("Tom",True)
+mouse=Mouse("Mickey",True,"black")
+dog=Dog("Max",True,"brown")
+cat=Cat("Tom",True,"blue")
 
-# mouse.Talk()
+mouse.Talk()
 
 
 # MULTIPLE AND MULTILEVEL INHERITANCE
