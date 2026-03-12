@@ -1,4 +1,6 @@
 # Polymorphism having many forms
+
+#Polymorphism through inheritance
 class Shape:
 
   def description(self):

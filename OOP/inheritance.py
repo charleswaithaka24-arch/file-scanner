@@ -9,7 +9,7 @@ class Animal:
     print("This animal is asleep")
 
   def eat(self):
-    print("This animal is asleep")
+    print("This animal is eat")
   
 class Dog(Animal):
   def __init__(self,name,is_alive,colour):

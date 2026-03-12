@@ -1,5 +1,5 @@
 # compound intrest calculator
-def calculate_compound_interest(principal, annual_rate, years, compounds_per_year):
+def calculate_compound_interest(principal, annual_rate, years, compounds_per_year=1):
     amount = principal * ((1 + annual_rate / compounds_per_year) ** (compounds_per_year * years))
     return amount
 while True:
@@ -18,7 +18,8 @@ while True:
   else:
      break
 future_value = calculate_compound_interest(principal_amount, interest_rate, time_period_years, compounding_frequency)
-
-print(f"The future value after {time_period_years} years is: ${future_value:.2f}")
 compound_interest_earned = future_value - principal_amount
+print("_"*80)
+print(f"The future value after {time_period_years} years is: ${future_value:.2f}")
 print(f"The compound interest earned is: ${compound_interest_earned:.2f}")
+print("_"*80)
